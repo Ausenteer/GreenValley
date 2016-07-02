@@ -1,0 +1,59 @@
+
+
+// @import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-header {
+      padding: 10px 0;
+      border-bottom: 1px solid #ebebeb;
+      background-color: #black;
+
+    &__inner {
+      .container();
+    }
+
+    &__logo {
+      .colums(2);
+
+      @media (min-width: @screen-md) {
+
+      }
+    }
+
+    &__contacts {
+        .make-columns(5);
+        font-size: 18px;
+        line-height: 24px;
+        font-family: @ptsanscap;
+    }
+
+    &__btn {
+      display: none;
+
+      @media (min-width: @screen-md) {
+        display: block;
+      }
+    }
+
+    &__phone {
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: @firasans;
+    font-weight: 300;
+    color: @black;
+
+
+    @media (min-width: @screen-md) {
+      display: block;
+    }
+}
+
+    &__addres {
+    display: none;
+
+    @media (min-width: @screen-md) {
+      display: block;
+    }
+  }
+}

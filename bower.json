@@ -1,0 +1,17 @@
+{
+  "name": "1",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ausenteer <elena.schykina@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Ausenteer/GreenValley",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
