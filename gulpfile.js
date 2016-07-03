@@ -37,7 +37,7 @@ const fs = require('fs');
 // Запуск `NODE_ENV=production npm start [задача]` приведет к сборке без sourcemaps
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
-// Запуск `port=3004 npm start` приведет к запуску сервера обновлений на 3004 порту и всей обычной автоматизации
+// Запуск `port=3000 npm start` приведет к запуску сервера обновлений на 3004 порту и всей обычной автоматизации
 const port = process.env.port ? process.env.port : 3000;
 
 // Файлы компилируемых компонентов
