@@ -1,5 +1,3 @@
-build/*
-!build/readme.md
 design/
 src/_design
 src/blocks/sprite-svg--localstorage/img/*.svg
