@@ -1,5 +1,4 @@
-design/
-src/_design
+_design
 src/blocks/sprite-svg--localstorage/img/*.svg
 src/docs-files/docs.css
 

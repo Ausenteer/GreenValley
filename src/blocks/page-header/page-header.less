@@ -5,14 +5,11 @@
 
 .page-header {
     border-bottom: 1px solid #ebebeb;
-    height: 75px;
+    height: 90px;
     font-family: @ptsanscap;
 
-    &__container {
-      .container();
-    }
     &__inner {
-      .row();
+      .container();
     }
 
     &__logo {
@@ -20,18 +17,21 @@
       .make-xs-column(8);
       margin-left: 16.6666667%;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 17px;
 
 
       @media (min-width: @screen-lg) {
         text-align: left;
         margin-left: 0%;
+        padding-right: 10px;
+        width: 193px;
       }
     }
 
     &__toggler {
-      .make-xs-column(2);
-      margin-top: 28px;
+      // .make-xs-column(2);
+      margin-top: 33px;
+      float: right;
 
       @media (min-width: @screen-lg) {
         display: none;
@@ -41,24 +41,26 @@
 
     .main-nav {
       display: none;
-      .make-lg-column(5);
-      font-family: @ptsanscap;
+      .make-lg-column(4);
+      // font-family: @ptsanscap;
 
       @media (min-width: @screen-lg) {
-      display: inline-block !important;
+      display: inline-block;
+      padding: 0;
     }
 
         &__item {
-            display: inline-block;
-            vertical-align: middle;
-            padding-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          padding-right: 10px;
 
           a {
+            font-family: @opensans;
             font-size: 14px;
+            font-weight: 500;
             text-transform: uppercase;
             color: #191919;
-            line-height: 75px;
-            // font-family: @firasans;
+            line-height: 90px;
           }
 
           a:hover {
@@ -67,7 +69,7 @@
           }
         }
         &__item:first-child {
-          a {padding: 0;}
+          a {padding-right: 0;}
         }
     }
 
@@ -75,28 +77,52 @@
       display: none;
       .make-lg-column(3);
       font-size: 14px;
-      line-height: 18px;
-      margin-top: 17px;
 
       @media (min-width: @screen-lg) {
-      display: inline-block !important;
-    }
+      display: inline-block;
+      margin-left: 8.33333333%;
+      padding: 0;
+      }
 
-      &__phone {
+      a {
+        display: none;
+        font-family: @ptsanscap;
         font-size: 18px;
-        line-height: 24px;
         color: #191919;
-        font-weight: 700;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: 22px;
+
+
+        @media (min-width: @screen-lg) {
+        display: inline-block;
+        }
+      }
+
+      p {
+        display: none;
+        font-family: @opensans;
+        font-size: 14px;
+        color: #191919;
+        font-weight: 600;
+        line-height: 30px;
+
+        @media (min-width: @screen-lg) {
+        display: inline-block;
+        }
       }
     }
+
 
     &__btn {
       .make-lg-column(2);
       display: none;
-      margin-top: 17px;
+      margin-top: 25px;
+      padding-left: 18px;
+
 
       @media (min-width: @screen-lg) {
-      display: inline-block !important;
+      display: inline-block;
     }
 
     }
@@ -106,13 +132,13 @@
 .menu-toggler {
   text-decoration: none;
   cursor: pointer;
-  width: 28px;
-  height: 20px;
-  float: right;
+  // width: 28px;
+  // height: 30px;
+  text-align: center;
 
   span {
     width: 28px;
-    height: 4px;
+    height: 5px;
     background-color: @orangebtn;
     margin-bottom: 4px;
     display: block;
@@ -123,50 +149,54 @@
 .main-nav-toggler {
     display: none;
     width: 100%;
+
     &__list {
       list-style: none;
       text-align: center;
     }
+
     &__item {
       display: list-item;
       padding: 14px 0;
       border-bottom: 1px solid #ebebeb;
 
-       a  {
-         line-height: 18px;
-         text-decoration: none;
-         cursor: pointer;
-         font-size: 14px;
-         line-height: 18px;
-         font-weight: 300;
-         color: #191919;
-         text-transform: uppercase;
+      a {
+        line-height: 18px;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 300;
+        color: #191919;
+        text-transform: uppercase;
       }
 
-         a:hover {
-          color: @orangebtn;
-          text-decoration: none;
-        }
-  }
-}
-
-#nav-toggler {
-      @media (min-width: @screen-lg) {
-      display: none;
+      a:hover {
+        color: @orangebtn;
+        text-decoration: none;
+      }
     }
+  @media (min-width: @screen-lg) {
+    display: none !important;
+  }
 }
 
 .btn {
   display: inline-block;
   text-align: center;
   background-color: @orangebtn;
+  font-family: @opensans;
   font-size: 12px;
-  line-height: 38px;
+  height: 38px;
   font-weight: 700;
   color: @white;
   border-radius: 25px;
   text-transform: uppercase;
-  width: 170px;
+  width: 180px;
+
+    p {
+      padding: 11px 0 0 18px
+    }
 }
 
 .btn:hover {
@@ -179,5 +209,5 @@
     background-image: url('../../img/calendar-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 45%;
-    padding-left: 10px;
+    padding: 0 10px;
   }
