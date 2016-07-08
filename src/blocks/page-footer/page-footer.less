@@ -1,8 +1,67 @@
 // Для импорта в диспетчер подключений: @import './src/blocks/page-footer/page-footer.less';
 
-@import '../../less/variables.less';     // только для удобства обращения к переменным
+// @import '../../less/variables.less';     // только для удобства обращения к переменным
 
 
 .page-footer {
+  border-top: 1px solid #ebebeb;
+  font-family: @opensans;
+  font-size: 18px;
+  padding: 28px 0;
 
-}
+    &__inner {
+      .container();
+    }
+
+    &__address {
+      display: none;
+      .make-sm-column(4);
+
+      @media (min-width: @screen-sm) {
+        display: inline-block;
+        padding: 23px 10px;
+
+      }
+    }
+
+    &__logo {
+      text-align: center;
+      .make-sm-column(4);
+
+      .social-list {
+        width: 143px;
+        margin: 12px auto 0;
+
+
+          a:last-child {
+            float: right;
+          }
+
+          a:first-child {
+            float: left;
+          }
+
+
+      }
+
+    }
+
+    &__contacts {
+      display: none;
+      .make-sm-column(4);
+
+        @media (min-width: @screen-sm) {
+          display: inline-block;
+          text-align: right;
+          padding: 23px 10px 0 0;
+          color: #191919;
+
+            a {
+              color: #191919;
+            }
+
+        }
+    }
+
+  }
+
