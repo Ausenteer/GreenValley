@@ -380,12 +380,18 @@ function getComponentsFiles() {
     сomponentsFilesList.js = jsLibs.concat(сomponentsFilesList.js);
   }
   // Если хочется иметь jQuery в конкатенируемом JS, раскомментируйте эти строки
-  // if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
-  //   сomponentsFilesList.js.unshift(dirs.source + '/js/jquery.js'); // добавляем в самое начало
-  // }
+  if(fileExistAndHasContent(dirs.source + '/js/jquery.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/jquery.js'); // добавляем в самое начало
+  }
+  if(fileExistAndHasContent(dirs.source + '/js/owl.carousel.min.js')) {
+    сomponentsFilesList.js.push(dirs.source + '/js/owl.carousel.min.js'); // добавляем в самое начало
+  }
   // Добавим глобальный CSS-файл в начало массива с обрабатываемыми CSS-файлами
   if(fileExistAndHasContent(dirs.source + '/css/global-additional-css.css')) {
     сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/global-additional-css.css');
+  }
+  if(fileExistAndHasContent(dirs.source + '/css/owl.carousel.css')) {
+  сomponentsFilesList.additionalCss.unshift(dirs.source + '/css/owl.carousel.css');
   }
   // Добавим глобальные изображения
   сomponentsFilesList.img.unshift(dirs.source + '/img/*.{jpg,jpeg,gif,png,svg}');
