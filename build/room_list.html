@@ -1,30 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+<meta charset="utf-8">
+<title>Номера</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+</script>
+
 </head>
 <body>
-  
-	<!-- HEADER -->
 
-  <header class="page-header">
-		<div class="page-header__inner">
-		<a href="" class="main-logo"><img src="" alt=""></a>
-		<nav class="main-nav">
-        	<ul class="main-nav__list">
-        		<li class="main-nav__item"><a href="">Номера</a></li>
-          		<li class="main-nav__item"><a href="">Коттедж</a></li>
-          		<li class="main-nav__item"><a href="">Ресторан</a></li>
-          		<li class="main-nav__item"><a href="">Отдых</a></li>
-          		<li class="main-nav__item"><a href="">Контакты</a></li>
-        	</ul>
-        	<div class="main-nav__toggler"><span></span></div>
-        </nav>
-        <div class="page-header__contacts"><a href="" class="page-header__phone">+ 7 812 777-55-88</a><br>г. Санкт-Петербург, Приморское ш.600</div>
-    	</div>
-    	<a href="" class="btn  btn--icon-calendar"></a>
-	</header>
+<header class="page-header">
+  <div class="page-header__inner">
+    <div class="page-header__logo">
+      <a href="index.html" class="main-logo">
+        <img src="img/header-logo.png" alt="логотип">
+      </a>
+    </div>
+    <div class="page-header__toggler">
+      <a href="" class="menu-toggler" id="toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="room-list.html">Номера</a></li>
+        <li class="main-nav__item"><a href="single-room.html">Коттедж</a></li>
+        <li class="main-nav__item"><a href="">Ресторан</a></li>
+        <li class="main-nav__item"><a href="">Отдых</a></li>
+        <li class="main-nav__item"><a href="">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="page-header__contacts">
+      <a href="tel:+78127775588">+7 812 777-55-88</a>
+      <p>г. Санкт-Петербург, Приморское ш.600</p>
+    </div>
+    <div class="page-header__btn">
+      <a href="form.html" class="btn  btn--icon-calendar"><p>Забронировать</p></a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav-toggler" id="nav-toggler">
+  <ul class="main-nav-toggler__list">
+    <li class="main-nav-toggler__item"><a href="room-list.html">Номера</a></li>
+    <li class="main-nav-toggler__item"><a href="single-room.html">Коттедж</a></li>
+    <li class="main-nav-toggler__item"><a href="">Ресторан</a></li>
+    <li class="main-nav-toggler__item"><a href="">Отдых</a></li>
+
+    <li class="main-nav-toggler__item"><a href="">Контакты</a></li>
+  </ul>
+</nav>
 
   <main>
     <section class="page-name">
@@ -79,19 +116,12 @@
         </div>
 
       </div>
-        
-    </section>
-  </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__inner">
-      <div class="page-footer__adress">г. Санкт-Петербург Приморское ш.600</div>
-      <a href="" class="main-logo"><img src="" alt=""></a>
-      <div class="social-list">
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-      </div>
-      <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
-    </div>
-  </footer>
+    </section>
+  </main>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+<script src="js/script.min.js"></script>
+
+</body>
+</html>
