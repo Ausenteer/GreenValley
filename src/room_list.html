@@ -1,30 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+<meta charset="utf-8">
+<title>Номера</title>
+<meta name="description" content="">
+@@include('_include/page_head.html')
 </head>
 <body>
-  
-	<!-- HEADER -->
 
-  <header class="page-header">
-		<div class="page-header__inner">
-		<a href="" class="main-logo"><img src="" alt=""></a>
-		<nav class="main-nav">
-        	<ul class="main-nav__list">
-        		<li class="main-nav__item"><a href="">Номера</a></li>
-          		<li class="main-nav__item"><a href="">Коттедж</a></li>
-          		<li class="main-nav__item"><a href="">Ресторан</a></li>
-          		<li class="main-nav__item"><a href="">Отдых</a></li>
-          		<li class="main-nav__item"><a href="">Контакты</a></li>
-        	</ul>
-        	<div class="main-nav__toggler"><span></span></div>
-        </nav>
-        <div class="page-header__contacts"><a href="" class="page-header__phone">+ 7 812 777-55-88</a><br>г. Санкт-Петербург, Приморское ш.600</div>
-    	</div>
-    	<a href="" class="btn  btn--icon-calendar"></a>
-	</header>
+@@include('blocks/page-header/page-header.html')
 
   <main>
     <section class="page-name">
@@ -79,19 +64,10 @@
         </div>
 
       </div>
-        
+
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__inner">
-      <div class="page-footer__adress">г. Санкт-Петербург Приморское ш.600</div>
-      <a href="" class="main-logo"><img src="" alt=""></a>
-      <div class="social-list">
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-        <span class="social-list__item"><a href=""><img src=""></a></span>
-      </div>
-      <div class="page-footer__contacts">+7 812 777-55-88 info@greenvalley.ru</div>
-    </div>
-  </footer>
+@@include('_include/page_bottom.html')
+</body>
+</html>
