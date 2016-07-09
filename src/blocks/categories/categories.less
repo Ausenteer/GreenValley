@@ -1,0 +1,121 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/categories/categories.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.categories {
+
+  &__inner {
+    .container();
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: @screen-sm) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  }
+
+  &__title {
+    font-family: @ptserifcap;
+    font-size: 30px;
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  &__item {
+    background-color: #fafafa;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: @screen-sm) {
+      border-right: 1px solid #ebebeb;
+      border-left: 1px solid #ebebeb;
+    }
+  }
+
+  &__item-title {
+    font-family: @ptserif;
+    font-size: 26px;
+  }
+
+  &__item-price {
+    font-family: @opensans;
+    font-weight: bold;
+    margin-bottom: 30px;
+
+    span {
+      color: @orangebtn;
+    }
+  }
+
+    &__item-img {
+      .make-sm-column(10);
+
+      @media (min-width: @screen-sm) {
+        height: 300px;
+        display: inline-block;
+        float: none;
+    }
+  }
+
+  &__item-text {
+    font-family: @opensans;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 30px 20px;
+    text-align: left;
+    .make-sm-column(7);
+
+
+    @media (min-width: @screen-sm) {
+      float: none;
+      margin-left: 16.6667%;
+    }
+  }
+
+
+  &__item-buttons {
+    text-align: center;
+    margin: 30px 0 30px;
+
+    @media (min-width: @screen-sm) {
+      margin-top: 40px;
+    }
+
+    a:nth-child(1){
+      margin-right: 40px;
+    }
+  }
+}
+
+.btn--orange:hover {
+  background-color: @orangebtnhover;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn--no-btn {
+  background: none;
+  border-radius: 0;
+  color: #000;
+  padding: 0;
+  width: 74px;
+  height: 18px;
+  margin: 25px auto 0;
+  .make-xs-column(12);
+
+    @media (min-width: 720px) {
+    }
+
+}
+
+.btn--no-btn:hover {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px dashed #000;
+}
+

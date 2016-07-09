@@ -187,27 +187,24 @@
   background-color: @orangebtn;
   font-family: @opensans;
   font-size: 12px;
-  height: 38px;
   font-weight: 700;
   color: @white;
   border-radius: 25px;
   text-transform: uppercase;
   width: 180px;
+  padding: 11px 10px;
 
-    p {
-      padding: 11px 0 0 18px
-    }
-}
-
-.btn:hover {
-  background-color: @orangebtnhover;
-  text-decoration: none;
-  color: #fff;
 }
 
 .btn--icon-calendar {
     background-image: url('../img/calendar-icon.png');
     background-repeat: no-repeat;
     background-position: 20px 45%;
-    padding: 0 10px;
+    padding-left: 25px;
   }
+
+.btn--icon-calendar:hover {
+  background-color: @orangebtnhover;
+  text-decoration: none;
+  color: #fff;
+}
