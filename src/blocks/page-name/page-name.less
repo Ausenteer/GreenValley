@@ -1,0 +1,47 @@
+// Для импорта в диспетчер подключений: @import './src/blocks/page-name/page-name.less';
+
+@import '../../less/variables.less';     // только для удобства обращения к переменным
+
+
+.page-name {
+    background-image: url(../../img/roomlist-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: center;
+    padding: 0 40px;
+    min-height: 200px;
+
+    @media (min-width: @screen-lg) {
+        background-position: 0 70%;
+      }
+
+    &__inner {
+      .container();
+    }
+
+    &__title {
+      font-family: @ptserifcap;
+      font-size: 30px;
+      color: #fff;
+      line-height: 42px;
+      font-weight: normal;
+      margin: 55px 0;
+
+     @media (min-width: @screen-sm) {
+        margin: 35px 0;
+      }
+    }
+
+    &__text {
+      display: none;
+      font-family: @opensans;
+      font-size: 18px;
+      color: #fff;
+
+
+      @media (min-width: @screen-sm) {
+        display: block;
+      }
+    }
+}
