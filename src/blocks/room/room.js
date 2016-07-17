@@ -4,6 +4,9 @@ $(document).ready(function(){
   var carousel_1 = $('#slider-room');
 
   // Инициируем карусели
-  carousel_1.owlCarousel({ items: 1 });
+  carousel_1.owlCarousel({
+    items: 1,
+    loop:true,
+  });
 
 });
