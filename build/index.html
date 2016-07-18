@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+++++<!DOCTYPE html>
 <html class="no-js" lang="ru">
 
 <head>
 <meta charset="utf-8">
 <title>Главная</title>
-<meta name="description" content="">
+<meta name="description" content="">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=PT+Sans+Caption&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
@@ -15,7 +16,9 @@
 <script>
   // Маркер работающего javascript
   document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-</script>
+</script>
+
+
 
 </head>
 
@@ -289,21 +292,27 @@
       </div>
     </section>
 
-    <section class="services">
-      <div class="services__inner">
-        <h2 class="services__title">Где вы хотите отдохнуть?</h2>
-        <a href="#" class="services-list">
-          <img src="services-list__img" alt="">
-          <h3 class="services-list__title">В отеле</h3>
-          <p class="services-list__cost">6800 руб./сутки</p>
-        </a>
-        <a href="#" class="services-list">
-          <img src="services-list__img" alt="">
-          <h3 class="services-list__title">В отеле</h3>
-          <p class="services-list__cost">6800 руб./сутки</p>
-        </a>
-      </div>
-    </section>
+<section class="services">
+  <div class="services__inner">
+    <h2 class="services__title">Где вы хотите отдохнуть?</h2>
+    <div class="services__list">
+      <a href="#" class="services__item">
+        <img src="img/services-hotel.jpg"  class="services__img"  alt="">
+        <div class="services__text-inner">
+          <h3>В отеле</h3>
+          от <strong>4000</strong> руб./сутки
+        </div>
+      </a>
+      <a href="#" class="services__item">
+        <img src="img/services-cottage.jpg"  class="services__img"  alt="">
+        <div class="services__text-inner">
+          <h3>В коттедже</h3>
+          от <strong>6800</strong> руб./сутки
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <footer class="page-footer">
   <div class="page-footer__inner">
@@ -326,7 +335,8 @@
       <p>info@greenvalley.ru</p>
      </div>
   </div>
-</footer>
+</footer>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
 <script>window.jQuery || document.write('<script src="js/owl.carousel.min.js"><\/script>')</script>
