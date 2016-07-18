@@ -4,5 +4,125 @@
 
 
 .discount {
-  
+  width: 100%;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    padding: 40px 40px 0;
+    font-size: 30px;
+    font-family: @ptserifcap;
+    letter-spacing: 50;
+    font-weight: bold;
+
+    @media (min-width: @screen-sm) {
+      font-size: 28px;
+      padding: 30px 40px 0;
+    }
+
+    @media (min-width: @screen-lg) {
+      padding: 40px 40px 0;
+    }
+  }
+
+  &__inner-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 35px;
+
+    @media (min-width: @screen-lg) {
+      padding: 0 10px 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 50% 50%;
+
+    @media (min-width: @screen-sm) {
+
+    }
+
+    @media (min-width: @screen-lg) {
+    height: 335px;
+    background-position: 50% 40%;
+    }
+  }
+
+  &__slider--active {
+    display: block;
+  }
+
+  &__slider-text {
+    position: absolute;
+    width: 300px;
+    top: 160px;
+    left: 0;
+    background-color: #f2f4f4;
+    font-size:16px;
+    font-family: @opensans;
+    letter-spacing: 15;
+    line-height: 22px;
+    text-align: left;
+    padding: 15px 20px 15px 20px;
+
+    // @media (min-width: @screen-sm) {
+
+    // }
+
+    @media (min-width: @screen-lg) {
+      width: 350px;
+      top: 195px;
+    }
+
+    strong {
+      display: block;
+      color: @orangebtn;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+
+      @media (min-width: @screen-lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__switcher-dots {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @media (min-width: @screen-lg) {
+      margin-top: 30px;
+    }
+  }
+
+  &__dots {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid @orangebtn;
+    margin: 0 8px 0;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+      background-color: @orangebtnhover;
+      }
+    }
+  }
+
+  &__dots--active {
+    background-color: @orangebtn;
+  }
 }

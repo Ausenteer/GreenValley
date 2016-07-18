@@ -1,17 +1,19 @@
-    <section class="discount">
-      <h2 class="discount__title">Акции и предложения</h2>
-      <div class="discount__slider">
-        <div class="discount__item">
-              <div class="discount__item-text">
-                <h2 class="discount__item-text-title">Скидки в мае</h2>
-                <p>Забронируйте номер или коттедж любой категории до 1 июня и получите скидку 10%!</p>
-            </div>
-          </div>
-          <div class="discount__item">
-            <div class="discount__item-text">
-                <h2 class="discount__item-text-title">Скидки в сентябре</h2>
-                <p>Забронируйте номер или коттедж любой категории до 31 сентября и получите скидку 20%!</p>
-              </div>
-          </div>
-      </div>
-    </section>
+<section class="discount">
+  <h2 class="discount__title">Акции и предложения</h2>
+  <div id="discount" class="discount__inner-slider owl-carousel">
+    <div id="discount_1" class="discount__slider  discount__slider--active" style="background-image:url(img/offers.jpg);">
+      <div class="discount__slider-text"><strong>Скидки в мае</strong>Забронируйте номер или коттедж любой категории до 31 июня и получите скидку 10%!</div>
+    </div>
+    <div id="discount_2" class="discount__slider" style="background-image:url(img/offers.jpg);">
+      <div class="discount__slider-text"><strong>Скидки в июне</strong>Забронируйте номер или коттедж любой категории до 31 июля и получите скидку 5%!</div>
+    </div>
+  </div>
+  <ul class="discount__switcher-dots">
+    <li id="1" class="discount__dots  discount__dots--active">
+      <a href="#discount_1"></a>
+    </li>
+    <li id="2" class="discount__dots">
+      <a  href="#discount_2"></a>
+    </li>
+  </ul>
+</section>
