@@ -1,24 +1,29 @@
 $(document).ready(function(){
 
-  // Находим в ДОМе элементы для карусели
-  var carousel = $('#discount');
+var offersCarousel = $('#discount'),
+reviewInitTimeCounter;
 
+offersCarousel.owlCarousel({ items: 1, dots: true });
 
-  // Инициируем карусели
-  carousel.owlCarousel({ items: 1, dots: true});
+$(window).on('resize', function(){
+clearTimeout(reviewInitTimeCounter);
+reviewInitTimeCounter = setTimeout(reviewCarouselTrigger, 100);
+});
 
-  // Следим за кликом на первой ссылке-переключаетеле
-  // $('#1').on('click', function(e){
-  //   e.preventDefault();
-  //   carousel.trigger('to.owl.carousel', 0);
+reviewCarouselTrigger();
 
-  // });
-
-  // // Следим за кликом на второй ссылке-переключаетеле
-  // $('#2').on('click', function(e){
-  //   e.preventDefault();
-  //   carousel.trigger('to.owl.carousel', 1);
-
-  // });
+// function reviewCarouselTrigger() {
+// if ($('body').outerWidth() >= 1200) {
+// reviewCarousel.owlCarousel({ items: 1 });
+// }
+// else {
+// reviewCarousel
+// .trigger('destroy.owl.carousel')
+// .removeClass('owl-carousel owl-loaded')
+// .find('.owl-stage-outer')
+// .children()
+// .unwrap();
+// }
+// }
 
 });

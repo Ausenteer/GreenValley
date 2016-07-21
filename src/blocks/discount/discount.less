@@ -122,7 +122,21 @@
     }
   }
 
-  &__dots--active {
-    background-color: @orangebtn;
+
+.owl-dots {
+  margin-top: 15px;
+}
+
+  .owl-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid @orangebtn;
+    margin: 0 8px 0;
   }
+
+  .owl-dot.active{
+      background-color: @orangebtn;
+    }
 }

@@ -1,8 +1,205 @@
-<!--DEV
+<form id="main-form" action="">
 
-Нужно убрать пробел между @-ами:
 
-@ @include('blocks/booking/booking.html')
+<section class="date-rest">
+  <div class="date-rest__inner">
+    <div class="step">Шаг 1</div>
+    <h2 class="date-rest__title">Дата отдыха</h2>
+    <ul class="date-rest__date-list">
+      <li class="date-rest__date-item">
+        Дата въезда
+        <div class="date-rest__date">
+          <label><input type="number"  id="arrival-day"  min="1" max="31" placeholder="ДД"  required></label>
+          <label><input type="number"  id="arrival-month"  min="1" max="2"  placeholder="ММ"  required></label>
+          <label><input type="number"  id="arrival-year"  min="2016" max=2030"  placeholder="ГГГГ"  required></label>
+        </div>
+      </li>
+      <li class="date-rest__date-item">
+        Дата выезда
+        <div class="date-rest__date">
+          <label><input type="number"  id="departure-day"  min="1" max="1"  placeholder="ДД"  required></label>
+          <label><input type="number"  id="departure-month"  min="1" max=12"  placeholder="ММ"  required></label>
+          <label><input type="number"  id="departure-year"  min="2016" max="2030"  placeholder="ГГГГ"  required></label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
--->
-<div class="booking">content</div>
+<section class="place">
+  <div class="place__inner">
+    <div class="step">Шаг 2</div>
+    <h2 class="place__title">Место проживания</h2>
+    <ul class="place__list">
+      <li class="place__item">
+        <label class="place__choise">
+          <input type="radio" name="place-type">
+          <span  class="place__item-name">Отель</span>
+        </label>
+      </li>
+      <li class="place__item">
+        <label class="place__choise">
+          <input type="radio" name="place-type" checked>
+          <span  class="place__item-name">Коттедж</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="cottage">
+  <div class="cottage__inner">
+    <div class="step">Шаг 3</div>
+    <h2 class="cottage__title">Тип коттеджа</h2>
+    <ul class="cottage__list">
+      <li class="cottage__item">
+        <input type="radio" name="cottage-type"  class="cottage__input"  id="flagman">
+        <label for="flagman"  class="cottage__choise">Флагман</label>
+      </li>
+      <li class="cottage__item">
+        <input type="radio" name="cottage-type"  class="cottage__input"  id="ozerny">
+        <label for="ozerny" class="cottage__choise">Озерный</label>
+      </li>
+      <li class="cottage__item">
+        <input type="radio" name="cottage-type"  class="cottage__input"  id="olhovka">
+        <label for="olhovka" class="cottage__choise">Ольховка</label>
+      </li>
+      <li class="cottage__item">
+        <input type="radio" name="cottage-type"  class="cottage__input"  id="portovy">
+        <label for="portovy" class="cottage__choise">Портовый</label>
+      </li>
+    </ul>
+    <div class="house-type"  id="house-type--flagman">
+      <ul class="house-type__list">
+        <li class="house-type__item">Площадь 100м<sup>2</sup></li>
+        <li class="house-type__item">3 комнаты</li>
+        <li class="house-type__item">5 спальных мест</li>
+        <li class="house-type__item">Раздельный санузел</li>
+        <li class="house-type__item">Wi-fi</li>
+      </ul>
+    </div>
+    <div class="house-type"  id="house-type--ozerny">
+      <ul class="house-type__list">
+        <li class="house-type__item">Площадь 200м<sup>2</sup></li>
+        <li class="house-type__item">3 комнаты</li>
+        <li class="house-type__item">5 спальных мест</li>
+        <li class="house-type__item">Раздельный санузел</li>
+        <li class="house-type__item">Wi-fi</li>
+      </ul>
+    </div>
+    <div class="house-type"  id="house-type--olhovka">
+      <ul class="house-type__list">
+        <li class="house-type__item">Площадь 300м<sup>2</sup></li>
+        <li class="house-type__item">3 комнаты</li>
+        <li class="house-type__item">5 спальных мест</li>
+        <li class="house-type__item">Раздельный санузел</li>
+        <li class="house-type__item">Wi-fi</li>
+      </ul>
+    </div>
+    <div class="house-type"  id="house-type--portovy">
+      <ul class="house-type__list">
+        <li class="house-type__item">Площадь 400м<sup>2</sup></li>
+        <li class="house-type__item">3 комнаты</li>
+        <li class="house-type__item">5 спальных мест</li>
+        <li class="house-type__item">Раздельный санузел</li>
+        <li class="house-type__item">Wi-fi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="personal-info">
+  <div class="personal-info__inner">
+    <div class="step">Шаг 4</div>
+    <h2 class="personal-info__title">Персональная информация</h2>
+    <div class="personal-info__info--wrapper">
+      <label class="personal-info__info  personal-info__info-filled">
+        <input type="text" name="name" placeholder="Имя" required>
+        <span class="personal-info__check-icon"></span>
+      </label>
+      <label class="personal-info__info">
+        <input type="text" name="surname" placeholder="Фамилия" required>
+        <span class="personal-info__check-icon"></span>
+      </label>
+    </div>
+    <div class="personal-info__info--wrapper">
+      <label class="personal-info__info">
+        <input type="tel" name="telephone" placeholder="Номер телефона" required>
+        <span class="personal-info__check-icon"></span>
+        <div class="personal-info__explain">Мы свяжемся с вами в случае необходимости.</div>
+      </label>
+      <label class="personal-info__info">
+        <input type="email" name="email" placeholder="E-mail" required>
+        <span class="personal-info__check-icon"></span>
+        <div class="personal-info__explain">На этот адрес мы вышлем вам подтверждение о забронированном номере.</div>
+      </label>
+    </div>
+  </div>
+</section>
+
+
+<section class="payment">
+  <div class="payment__inner">
+    <div class="step">Шаг 5</div>
+    <h2 class="payment__title">Способ оплаты</h2>
+    <div class="pay">
+      <div class="pay__wrapper">
+        <div class="pay__later">
+          <label class="pay__choise" for="later">
+            <input type="radio" name="pay" id="later">
+            <h4 class="pay__title">По приезду</h4>
+            <p class="pay__text">Вы можете произвести оплату по факту заселения</p>
+          </label>
+        </div>
+        <div class="pay__now">
+          <label class="pay__choise" for="now">
+            <input type="radio" name="pay" id="now" checked>
+            <h4 class="pay__title">Сейчас</h4>
+            <p class="pay__text">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</p>
+          </label>
+          <div class="card-info">
+            <div class="card-info__wrapper">
+              <div class="card-info__field">
+                <label for="card-number">Номер карты</label>
+                <input type="text" class="card-info__input" name="card-number" maxlength="16" id="card-number" placeholder="0000-0000-0000-0000">
+              </div>
+              <div class="card-info__field">
+                <label for="card-holder">Фамилия владельца карты</label>
+                <input type="text" class="card-info__input" name="card-holder" id="card-holder" placeholder="VLADIMIR VLADIMIROV">
+              </div>
+            </div>
+            <div class="card-info__wrapper  card-info__wrapper--short">
+              <div class="card-info__field  card-info__field--short">
+                <div class="card-info__pic-q"></div>
+                <div class="card-info__prompt">Подсказка о CVV</div>
+                <label for="cvv-code">Код CVV</label>
+                <input type="text" class="card-info__input" name="cvv-code" maxlength="3" id="cvv-code" placeholder="123">
+              </div>
+              <div class="card-info__field  card-info__field--short">
+                <label for="valid-until">Действует до</label>
+                <input type="text" class="card-info__input" name="valid-until" maxlength="7" id="valid-until" placeholder="01/2018">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bill">
+        <h3>К оплате</h3>
+        <div class="bill__charge">15000 рублей</div>
+      </div>
+      <div class="bill  bill--false">
+        <h3>К оплате</h3>
+        <div class="bill__charge">-</div>
+        <div class="bill__annotation">Пожалуйста, <a href="" class="dashed">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате.</div>
+      </div>
+    </div>
+    <div class="payment__button">
+      <button type="submit" class="btn  btn--green">Забронировать</button>
+    </div>
+  </div>
+</section>
+
+
+</form>
