@@ -10,7 +10,7 @@ clearTimeout(reviewInitTimeCounter);
 reviewInitTimeCounter = setTimeout(reviewCarouselTrigger, 100);
 });
 
-reviewCarouselTrigger();
+// reviewCarouselTrigger();
 
 // function reviewCarouselTrigger() {
 // if ($('body').outerWidth() >= 1200) {

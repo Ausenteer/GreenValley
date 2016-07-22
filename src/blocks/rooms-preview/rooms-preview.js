@@ -1,30 +1,29 @@
 $(document).ready(function(){
 
-  // Находим в ДОМе элементы для карусели
-  var carousel = $('#rooms-preview-slider');
+var offersCarousel = $('#rooms-preview-slider'),
+reviewInitTimeCounter;
 
-  // Инициируем карусели
-  // carousel.owlCarousel({
+offersCarousel.owlCarousel({ items: 2});
 
-  //   items: 3,
-  //   loop: true,
-  //   dots: true,
-  //   responsiveClass:true,
-  //   responsive: {
-  //       0:{
-  //           items: 1,
-  //       },
+$(window).on('resize', function(){
+clearTimeout(reviewInitTimeCounter);
+reviewInitTimeCounter = setTimeout(reviewCarouselTrigger, 100);
+});
 
-  //       768:{
-  //           items: 2,
-  //       },
+reviewCarouselTrigger();
 
-  //       900:{
-  //           items:3,
-  //           loop:false
-  //       }
-  //   }
-
-  // });
+function reviewCarouselTrigger() {
+if ($('body').outerWidth() >= 1200) {
+reviewCarousel
+.trigger('destroy.owl.carousel')
+.removeClass('owl-carousel owl-loaded')
+.find('.owl-stage-outer')
+.children()
+.unwrap();
+}
+else {
+reviewCarousel.owlCarousel({items: 2, });
+}
+}
 
 });
