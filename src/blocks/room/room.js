@@ -9,4 +9,9 @@ $(document).ready(function(){
     loop:true,
   });
 
+  $('.fancybox').fancybox({
+    closeBtn: true,
+  });
+
 });
+

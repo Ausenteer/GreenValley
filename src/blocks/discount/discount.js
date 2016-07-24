@@ -1,23 +1,23 @@
 $(document).ready(function(){
 
-var offersCarousel = $('#discount'),
-reviewInitTimeCounter;
+var offersCarousel = $('#discount');
+// reviewInitTimeCounter;
 
 offersCarousel.owlCarousel({ items: 1, dots: true });
 
-$(window).on('resize', function(){
-clearTimeout(reviewInitTimeCounter);
-reviewInitTimeCounter = setTimeout(reviewCarouselTrigger, 100);
-});
+// $(window).on('resize', function(){
+// clearTimeout(reviewInitTimeCounter);
+// reviewInitTimeCounter = setTimeout(reviewCarouselTrigger, 100);
+// });
 
 // reviewCarouselTrigger();
 
 // function reviewCarouselTrigger() {
 // if ($('body').outerWidth() >= 1200) {
-// reviewCarousel.owlCarousel({ items: 1 });
+// offersCarousel.owlCarousel({ items: 1 });
 // }
 // else {
-// reviewCarousel
+// offersCarousel
 // .trigger('destroy.owl.carousel')
 // .removeClass('owl-carousel owl-loaded')
 // .find('.owl-stage-outer')
